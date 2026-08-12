@@ -1,0 +1,20 @@
+@media(max-width:900px){
+  footer{
+    position:static;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    height:auto;
+    min-height:52px;
+    padding:12px 14px;
+    flex-wrap:wrap;
+  }
+  .shell{margin-bottom:24px}
+  footer .build{position:static;margin-left:auto}
+}
+@media(max-width:620px){
+  footer{gap:10px 14px;justify-content:center}
+  footer img{height:24px}
+  .footer-link{margin-left:0}
+  footer .build{display:block;width:100%;margin-left:0;text-align:center}
+}
