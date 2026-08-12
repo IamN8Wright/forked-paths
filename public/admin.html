@@ -1,1 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Forked Paths Admin</title><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/features.css"><link rel="stylesheet" href="/admin.css"></head><body><header class="topbar"><div><div class="game-title">FORKED PATHS</div><div class="subtitle">Admin Console</div></div><a href="/" class="ghost-btn admin-link">Game</a></header><main class="shell admin-shell"><section id="loginPanel" class="panel admin-login"><h2>Admin Login</h2><label>Email<input id="adminEmail" type="email" value="inn8labs@gmail.com"></label><label>Password<input id="adminPassword" type="password" autocomplete="current-password"></label><button id="loginBtn" class="primary">Sign In</button><p id="loginError" class="muted"></p></section><section id="adminPanel" hidden><div class="admin-toolbar"><div><h1>Control Room</h1><p class="muted">Characters, story timelines, and GUI settings.</p></div><button id="logoutBtn" class="ghost-btn">Sign Out</button></div><div class="admin-grid"><section class="panel"><h2>Characters</h2><div id="characterList"></div></section><section class="panel"><h2>Character Story</h2><div id="characterDetail" class="muted">Select a character.</div></section></div><section class="panel"><h2>GUI Settings</h2><div class="settings-grid"><label>Accent color<input id="accent" type="color" value="#d8ad53"></label><label>Story text size<input id="storySize" type="number" min="16" max="28" value="20"></label><label class="setting-check"><input id="choiceConfirm" type="checkbox" checked> Require choice confirmation</label></div><button id="saveSettings" class="primary">Publish GUI Settings</button><span id="settingsStatus" class="muted"></span></section></section></main><script src="/admin.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14110d">
+  <title>Forked Paths World Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/features.css?v=0.4.0">
+  <link rel="stylesheet" href="/admin-v4.css?v=0.4.0">
+</head>
+<body>
+<header class="topbar admin-topbar">
+  <div><div class="game-title">FORKED PATHS</div><div class="subtitle">World Builder · InN8 Labs</div></div>
+  <div class="top-actions"><a href="/" class="ghost-btn admin-link">Game</a><button id="publishAllTop" class="primary" hidden>Publish World Update</button><button id="logoutBtn" class="ghost-btn" hidden>Sign Out</button></div>
+</header>
+<main class="admin-shell">
+  <section id="loginPanel" class="panel admin-login">
+    <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, and publish when the roads are ready.</p>
+    <label>Email<input id="adminEmail" type="email" value="inn8labs@gmail.com" autocomplete="username"></label>
+    <label>Password<input id="adminPassword" type="password" autocomplete="current-password"></label>
+    <button id="loginBtn" class="primary">Sign In</button><p id="loginError" class="error-text"></p>
+  </section>
+
+  <section id="adminPanel" hidden>
+    <nav class="admin-nav" aria-label="World Builder sections">
+      <button data-view="overview" class="active">Overview</button>
+      <button data-view="players">Player Characters</button>
+      <button data-view="story">Story</button>
+      <span class="nav-divider"></span>
+      <button data-view="location">Locations</button>
+      <button data-view="npc">NPCs</button>
+      <button data-view="familiar">Familiars</button>
+      <button data-view="special_item">Special Items</button>
+      <button data-view="special_weapon">Special Weapons</button>
+      <button data-view="boon">Boons</button>
+      <span class="nav-divider"></span>
+      <button data-view="gui">GUI</button>
+    </nav>
+    <div id="adminContent" class="admin-content"><div class="loading-card">Opening the world ledger…</div></div>
+  </section>
+</main>
+<script src="/admin-v4-loader.js?v=0.4.0"></script>
+</body>
+</html>
