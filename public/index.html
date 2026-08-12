@@ -6,22 +6,7 @@
   <meta name="theme-color" content="#14110d">
   <title>Forked Paths | InN8 Labs</title>
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    .choices button.awaiting-confirmation{
-      border-color:var(--gold);
-      background:#2b2115;
-      box-shadow:0 0 0 1px rgba(216,173,83,.28) inset;
-    }
-    .choice-confirmation{
-      display:block;
-      margin:7px 0 0 28px;
-      color:var(--gold2);
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-  </style>
+  <link rel="stylesheet" href="/features.css">
 </head>
 <body>
   <div id="app">
@@ -116,52 +101,14 @@
     <footer>
       <span>Built by</span>
       <img src="/assets/inn8labs-logo.png" alt="InN8 Labs">
-      <span class="build">Engine v0.1.0</span>
+      <a class="footer-link" href="/contact">Contact Us</a>
+      <a class="footer-link" href="/admin">Admin</a>
+      <span class="build">Engine v0.2.0</span>
     </footer>
   </div>
 
   <script src="/data/world-data.js"></script>
   <script src="/app.js"></script>
-  <script>
-    (() => {
-      let selectedChoice = null;
-      let selectedChoiceHtml = "";
-
-      function clearSelectedChoice(){
-        if(!selectedChoice) return;
-        if(selectedChoice.isConnected){
-          selectedChoice.innerHTML = selectedChoiceHtml;
-          selectedChoice.classList.remove("awaiting-confirmation");
-          selectedChoice.setAttribute("aria-pressed","false");
-        }
-        selectedChoice = null;
-        selectedChoiceHtml = "";
-      }
-
-      document.addEventListener("click", event => {
-        const button = event.target.closest("#choices button");
-        if(!button) return;
-
-        if(button === selectedChoice){
-          button.innerHTML = selectedChoiceHtml;
-          button.classList.remove("awaiting-confirmation");
-          button.setAttribute("aria-pressed","false");
-          selectedChoice = null;
-          selectedChoiceHtml = "";
-          return;
-        }
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        clearSelectedChoice();
-        selectedChoice = button;
-        selectedChoiceHtml = button.innerHTML;
-        button.classList.add("awaiting-confirmation");
-        button.setAttribute("aria-pressed","true");
-        button.insertAdjacentHTML("beforeend", '<span class="choice-confirmation">Click again to confirm</span>');
-      }, true);
-    })();
-  </script>
+  <script src="/features.js"></script>
 </body>
 </html>
