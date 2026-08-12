@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#14110d">
   <title>Forked Paths | InN8 Labs</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/features.css?v=0.2.1">
+  <link rel="stylesheet" href="/features.css?v=0.3.0">
 </head>
 <body>
   <div id="app">
@@ -15,7 +15,7 @@
         <div class="game-title">FORKED PATHS</div>
         <div class="subtitle">A text-driven RPG</div>
       </div>
-      <button id="menuBtn" class="ghost-btn" aria-label="Open menu">☰</button>
+      <button id="menuBtn" class="ghost-btn" aria-label="Open player hub">☰</button>
     </header>
 
     <main class="shell">
@@ -58,7 +58,7 @@
       </section>
 
       <section id="gameScreen" class="screen game-layout">
-        <aside class="status-card">
+        <aside class="status-card" aria-hidden="true">
           <div class="portrait-ring">✦</div>
           <h2 id="statusName">Traveler</h2>
           <div class="stat-row"><span>Health</span><strong id="healthVal">100</strong></div>
@@ -92,7 +92,7 @@
 
     <div id="drawer" class="drawer" aria-hidden="true">
       <div class="drawer-head">
-        <h2 id="drawerTitle">Map</h2>
+        <h2 id="drawerTitle">Player Hub</h2>
         <button id="closeDrawer" class="ghost-btn">✕</button>
       </div>
       <div id="drawerBody"></div>
@@ -103,12 +103,12 @@
       <img src="/assets/inn8labs-logo.png" alt="InN8 Labs">
       <a class="footer-link" href="/contact">Contact Us</a>
       <a class="footer-link" href="/admin">Admin</a>
-      <span class="build">Engine v0.2.1</span>
+      <span class="build">Engine v0.3.0</span>
     </footer>
   </div>
 
   <script src="/data/world-data.js"></script>
   <script src="/app.js"></script>
-  <script src="/features.js?v=0.2.1"></script>
+  <script src="/features.js?v=0.3.0"></script>
 </body>
 </html>

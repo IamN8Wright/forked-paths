@@ -1,6 +1,6 @@
 {
   "name": "forked-paths",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "description": "Forked Paths — a text-driven RPG engine by InN8 Labs",
   "scripts": {
