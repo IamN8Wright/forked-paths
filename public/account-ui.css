@@ -1,0 +1,19 @@
+.account-entry-choice{display:grid;gap:10px;margin-top:16px}
+.account-entry-choice button{width:100%}
+.account-choice-divider{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.account-choice-divider:before,.account-choice-divider:after{content:"";height:1px;background:var(--line);flex:1}
+.account-modal-backdrop{position:fixed;inset:0;z-index:140;background:rgba(8,6,4,.82);display:grid;place-items:center;padding:18px;backdrop-filter:blur(3px)}
+.account-modal-backdrop[hidden]{display:none}
+.account-modal{width:min(520px,100%);max-height:calc(100vh - 36px);overflow:auto;border:1px solid var(--gold);background:linear-gradient(180deg,#211a12,#120f0b);box-shadow:0 20px 70px #000;padding:22px}
+.account-modal-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:8px}
+.account-modal-head h2{margin:3px 0 0;font-size:32px}
+.account-modal-form{display:grid;gap:13px;margin-top:18px}
+.account-modal-form>label:not(.marketing-optin){display:grid;gap:6px;color:var(--muted)}
+.account-modal-form input[type=email],.account-modal-form input[type=password]{width:100%;background:#0e0c09;border:1px solid var(--line);color:var(--ink);padding:12px}
+.marketing-optin{display:grid!important;grid-template-columns:auto 1fr!important;gap:11px!important;align-items:start;border:1px solid #3b3023;background:#15110c;padding:12px;color:var(--ink)!important}
+.marketing-optin input{width:auto;margin-top:3px}
+.marketing-optin strong,.marketing-optin small{display:block}
+.marketing-optin small{margin-top:4px;color:var(--muted);line-height:1.45;font-weight:400}
+.account-modal-error{min-height:20px;color:#e5a098;font-size:13px}
+.patreon-link{display:inline-flex;align-items:center;gap:6px}
+@media(max-width:620px){.account-modal{padding:17px}.account-modal-head h2{font-size:27px}}
