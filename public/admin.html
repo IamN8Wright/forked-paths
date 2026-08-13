@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#14110d">
   <title>Forked Paths World Builder</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/features.css?v=0.4.0">
-  <link rel="stylesheet" href="/admin-v4.css?v=0.4.0">
+  <link rel="stylesheet" href="/features.css?v=0.4.2">
+  <link rel="stylesheet" href="/admin-v4.css?v=0.4.2">
 </head>
 <body>
 <header class="topbar admin-topbar">
@@ -17,8 +17,8 @@
 <main class="admin-shell">
   <section id="loginPanel" class="panel admin-login">
     <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, and publish when the roads are ready.</p>
-    <label>Email<input id="adminEmail" type="email" value="inn8labs@gmail.com" autocomplete="username"></label>
-    <label>Password<input id="adminPassword" type="password" autocomplete="current-password"></label>
+    <label>Email<input id="adminEmail" name="admin-email-manual" type="email" value="" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Admin email"></label>
+    <label>Password<input id="adminPassword" name="admin-password-manual" type="password" autocomplete="current-password"></label>
     <button id="loginBtn" class="primary">Sign In</button><p id="loginError" class="error-text"></p>
   </section>
 
@@ -40,6 +40,6 @@
     <div id="adminContent" class="admin-content"><div class="loading-card">Opening the world ledger…</div></div>
   </section>
 </main>
-<script src="/admin-v4-loader.js?v=0.4.0"></script>
+<script src="/admin-v4-loader.js?v=0.4.2"></script>
 </body>
 </html>
