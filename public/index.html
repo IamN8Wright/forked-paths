@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#14110d">
   <title>Forked Paths | InN8 Labs</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/features.css?v=0.4.0">
+  <link rel="stylesheet" href="/features.css?v=0.4.2">
+  <link rel="stylesheet" href="/account-ui.css?v=0.4.2">
   <link rel="stylesheet" href="/mobile-footer-fix.css?v=1">
 </head>
 <body>
@@ -25,12 +26,13 @@
     </section>
   </main>
   <div id="drawer" class="drawer" aria-hidden="true"><div class="drawer-head"><h2 id="drawerTitle">Player Hub</h2><button id="closeDrawer" class="ghost-btn">✕</button></div><div id="drawerBody"></div></div>
-  <footer><span>Built by</span><img src="/assets/inn8labs-logo.png" alt="InN8 Labs"><a class="footer-link" href="/contact">Contact Us</a><a class="footer-link" href="/admin">Admin</a><span class="build">Engine v0.4.0</span></footer>
+  <footer><span>Built by</span><img src="/assets/inn8labs-logo.png" alt="InN8 Labs"><a class="footer-link" href="/contact">Contact Us</a><a class="footer-link patreon-link" href="https://www.patreon.com/cw/inn8labs" target="_blank" rel="noopener noreferrer">Support on Patreon</a><a class="footer-link" href="/admin">Admin</a><span class="build">Engine v0.4.2</span></footer>
 </div>
 <script src="/data/world-data.js"></script>
-<script src="/app-v4-loader.js?v=0.4.0"></script>
+<script src="/app-v4-loader.js?v=0.4.2"></script>
+<script src="/account-ui.js?v=0.4.2"></script>
 <script>
-window.addEventListener("click",event=>{if(event.target.closest?.("#menuBtn"))setTimeout(()=>{const line=document.querySelector(".engine-line");if(line)line.textContent="InN8 Labs · Forked Paths Engine v0.4.0";},120);},true);
+window.addEventListener("click",event=>{if(event.target.closest?.("#menuBtn"))setTimeout(()=>{const line=document.querySelector(".engine-line");if(line)line.textContent="InN8 Labs · Forked Paths Engine v0.4.2";},120);},true);
 </script>
 </body>
 </html>
