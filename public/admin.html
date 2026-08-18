@@ -17,7 +17,7 @@
 </header>
 <main class="admin-shell">
   <section id="loginPanel" class="panel admin-login">
-    <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, preview Decision Cards, and manage their artwork.</p>
+    <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, preview Decision Cards, and manage artwork for scenes, characters, familiars, and equipment.</p>
     <label>Email<input id="adminEmail" name="admin-email-manual" type="email" value="" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Admin email"></label>
     <label>Password<input id="adminPassword" name="admin-password-manual" type="password" autocomplete="current-password"></label>
     <button id="loginBtn" class="primary">Sign In</button><p id="loginError" class="error-text"></p>
@@ -42,6 +42,7 @@
     <div id="adminContent" class="admin-content"><div class="loading-card">Opening the world ledger…</div></div>
   </section>
 </main>
+<script src="/data/world-data.js?v=2.1.0"></script>
 <script src="/data/decision-cards-v2.js?v=2.1.0"></script>
 <script src="/data/quest-visuals-v21.js?v=2.1.0"></script>
 <script src="/admin-v4-loader.js?v=2.1.0"></script>
