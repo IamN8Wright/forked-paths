@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#14110d">
-  <title>Forked Paths World Builder</title>
+  <title>Forked Kingdoms World Builder</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/features.css?v=0.4.2">
-  <link rel="stylesheet" href="/admin-v4.css?v=0.4.2">
+  <link rel="stylesheet" href="/features.css?v=2.1.0">
+  <link rel="stylesheet" href="/admin-v4.css?v=2.1.0">
+  <link rel="stylesheet" href="/admin-v21.css?v=2.1.0">
 </head>
 <body>
 <header class="topbar admin-topbar">
-  <div><div class="game-title">FORKED PATHS</div><div class="subtitle">World Builder · InN8 Labs</div></div>
+  <div><div class="game-title">FORKED KINGDOMS 2.1.0</div><div class="subtitle">World Builder · InN8 Labs</div></div>
   <div class="top-actions"><a href="/" class="ghost-btn admin-link">Game</a><button id="publishAllTop" class="primary" hidden>Publish World Update</button><button id="logoutBtn" class="ghost-btn" hidden>Sign Out</button></div>
 </header>
 <main class="admin-shell">
   <section id="loginPanel" class="panel admin-login">
-    <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, and publish when the roads are ready.</p>
+    <div class="eyebrow">INN8 LABS</div><h1>World Builder</h1><p class="muted">Build the world, inspect its paths, preview Decision Cards, and manage their artwork.</p>
     <label>Email<input id="adminEmail" name="admin-email-manual" type="email" value="" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Admin email"></label>
     <label>Password<input id="adminPassword" name="admin-password-manual" type="password" autocomplete="current-password"></label>
     <button id="loginBtn" class="primary">Sign In</button><p id="loginError" class="error-text"></p>
@@ -41,6 +42,9 @@
     <div id="adminContent" class="admin-content"><div class="loading-card">Opening the world ledger…</div></div>
   </section>
 </main>
-<script src="/admin-v4-loader.js?v=0.4.2"></script>
+<script src="/data/decision-cards-v2.js?v=2.1.0"></script>
+<script src="/data/quest-visuals-v21.js?v=2.1.0"></script>
+<script src="/admin-v4-loader.js?v=2.1.0"></script>
+<script src="/admin-v21.js?v=2.1.0"></script>
 </body>
 </html>
