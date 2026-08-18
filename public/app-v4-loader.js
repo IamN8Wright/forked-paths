@@ -10,15 +10,14 @@
   }
 
   async function boot(){
-    // v0.4.1 hotfix: use the proven browser engine directly. The World Builder,
-    // Postgres content, accounts and admin APIs remain on v0.4.0 server-side.
-    await loadScript('/app.js?v=0.4.1');
-    await loadScript('/features.js?v=0.4.1');
+    await loadScript('/data/decision-cards-v2.js?v=2.0.0');
+    await loadScript('/app-v2.js?v=2.0.0');
+    await loadScript('/features.js?v=2.0.0');
     if(document.readyState==='complete') window.dispatchEvent(new Event('load'));
   }
 
   boot().catch(error=>{
-    console.error('Forked Paths boot failed:',error);
+    console.error('Forked Kingdoms 2.0 boot failed:',error);
     const start=document.querySelector('#startScreen .hero-card');
     if(start) start.insertAdjacentHTML('beforeend','<p class="system">The road could not be opened. Please refresh the page.</p>');
   });
