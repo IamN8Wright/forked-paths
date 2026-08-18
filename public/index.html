@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#14110d">
-  <title>Forked Kingdoms 2.0 | InN8 Labs</title>
+  <title>Forked Kingdoms 2.1.0 | InN8 Labs</title>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/features.css?v=2.0.0">
-  <link rel="stylesheet" href="/account-ui.css?v=2.0.0">
+  <link rel="stylesheet" href="/features.css?v=2.1.0">
+  <link rel="stylesheet" href="/account-ui.css?v=2.1.0">
   <link rel="stylesheet" href="/mobile-footer-fix.css?v=1">
-  <link rel="stylesheet" href="/engine-v2.css?v=2.0.0">
+  <link rel="stylesheet" href="/engine-v2.css?v=2.1.0">
 </head>
 <body>
 <div id="app">
   <header class="topbar">
-    <div class="brand"><div class="game-title">FORKED KINGDOMS 2.0</div><div class="subtitle">A living text-driven RPG</div></div>
+    <div class="brand"><div class="game-title">FORKED KINGDOMS 2.1.0</div><div class="subtitle">A living text-driven RPG</div></div>
     <button id="menuBtn" class="ghost-btn" aria-label="Open player hub">☰</button>
   </header>
   <main class="shell">
@@ -22,18 +22,20 @@
     <section id="createScreen" class="screen"><div class="panel"><h2>Create Traveler</h2><label>Name<input id="playerName" maxlength="32" placeholder="Traveler"></label><div class="field-group"><h3>Origin</h3><div id="originChoices" class="choice-grid"></div></div><div class="field-group"><h3>Starting Martial Style</h3><p class="muted">These are ordinary disciplines. The forbidden elemental forms remain secrets of the world and are not selectable here.</p><div id="styleChoices" class="choice-grid"></div></div><div class="create-actions"><button id="backToTitle" class="ghost-btn">Back</button><button id="beginBtn" class="primary" disabled>Begin</button></div></div></section>
     <section id="gameScreen" class="screen game-layout">
       <aside class="status-card" aria-hidden="true"><div class="portrait-ring">✦</div><h2 id="statusName">Traveler</h2><div class="stat-row"><span>Health</span><strong id="healthVal">100</strong></div><div class="bar"><i id="healthBar" style="width:100%"></i></div><div class="stat-row"><span>Gold</span><strong id="goldVal">0</strong></div><div class="stat-row"><span>Location</span><strong id="locationVal">Road</strong></div><div class="stat-row"><span>Reputation</span><strong id="repVal">0</strong></div><hr><div class="mini-heading">Elemental Affinity</div><div id="affinityList"></div><hr><div class="mini-heading">Companion</div><div id="companionVal" class="muted">None</div></aside>
-      <article class="story-card"><div id="chapterLabel" class="chapter">PROLOGUE</div><div id="storyText" class="story-text"></div><div id="choices" class="choices"></div></article>
+      <article class="story-card"><div id="chapterLabel" class="chapter" aria-hidden="true"></div><div id="storyText" class="story-text"></div><div id="choices" class="choices"></div></article>
       <aside class="utility-card"><button data-panel="map">Map</button><button data-panel="journal">Journal</button><button data-panel="inventory">Inventory</button><button data-panel="character">Character</button><button id="saveBtn">Save</button></aside>
     </section>
   </main>
   <div id="drawer" class="drawer" aria-hidden="true"><div class="drawer-head"><h2 id="drawerTitle">Player Hub</h2><button id="closeDrawer" class="ghost-btn">✕</button></div><div id="drawerBody"></div></div>
-  <footer><span>Built by</span><img src="/assets/inn8labs-logo.png" alt="InN8 Labs"><a class="footer-link" href="/contact">Contact Us</a><a class="footer-link patreon-link" href="https://www.patreon.com/cw/inn8labs" target="_blank" rel="noopener noreferrer">Support on Patreon</a><a class="footer-link" href="/admin">Admin</a><span class="build">Engine v2.0.0</span></footer>
+  <footer><span>Built by</span><img src="/assets/inn8labs-logo.png" alt="InN8 Labs"><a class="footer-link" href="/contact">Contact Us</a><a class="footer-link patreon-link" href="https://www.patreon.com/cw/inn8labs" target="_blank" rel="noopener noreferrer">Support on Patreon</a><a class="footer-link" href="/admin">Admin</a><span class="build">Engine v2.1.0</span></footer>
 </div>
 <script src="/data/world-data.js"></script>
-<script src="/app-v4-loader.js?v=2.0.0"></script>
-<script src="/account-ui.js?v=2.0.0"></script>
+<script src="/data/quest-visuals-v21.js?v=2.1.0"></script>
+<script src="/app-v4-loader.js?v=2.1.0"></script>
+<script src="/visual-runtime-v21.js?v=2.1.0"></script>
+<script src="/account-ui.js?v=2.1.0"></script>
 <script>
-window.addEventListener("click",event=>{if(event.target.closest?.("#menuBtn"))setTimeout(()=>{const line=document.querySelector(".engine-line");if(line)line.textContent="InN8 Labs · Forked Kingdoms Engine v2.0.0";},120);},true);
+window.addEventListener("click",event=>{if(event.target.closest?.("#menuBtn"))setTimeout(()=>{const line=document.querySelector(".engine-line");if(line)line.textContent="InN8 Labs · Forked Kingdoms Engine v2.1.0";},120);},true);
 </script>
 </body>
 </html>
