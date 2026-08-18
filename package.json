@@ -1,8 +1,8 @@
 {
   "name":"forked-paths",
-  "version":"0.4.2",
+  "version":"2.0.0",
   "private":true,
-  "description":"Forked Paths — a text-driven RPG engine and World Builder by InN8 Labs",
+  "description":"Forked Kingdoms 2.0 — a persistent text-driven RPG engine and World Builder by InN8 Labs",
   "scripts":{"start":"node server-v4-loader.js","dev":"node server-v4-loader.js"},
   "engines":{"node":">=20"},
   "dependencies":{"pg":"^8.13.1"}
